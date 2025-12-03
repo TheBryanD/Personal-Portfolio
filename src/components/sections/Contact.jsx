@@ -38,7 +38,7 @@ function Contact() {
             <div className="space-y-4">
               <div className="flex items-center gap-3 text-gray-300">
                 <Mail size={20} />
-                <span>johndoe@example.com</span>
+                <span>123bryan1998@gmail.com</span>
               </div>
               {/* Add more contact details as needed */}
             </div>

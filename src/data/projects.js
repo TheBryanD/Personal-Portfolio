@@ -1,10 +1,24 @@
 export const projects = [
   {
-    title: 'E-Commerce Platform',
-    description: 'A full-stack e-commerce solution with payment integration.',
-    tags: ['React', 'Node.js', 'MongoDB', 'Stripe'],
+    title: 'Personal Portfolio Website',
+    description: 'A React based front-end portfolio website to showcase my projects and skills.',
+    tags: ['React', 'Node.js', 'Tailwind', 'Vite', 'JavaScript', 'CSS', 'HTML'],
     image: 'https://images.unsplash.com/photo-1557821552-17105176677c',
-    link: 'https://project1.com'
+    link: 'https://thebryand.github.io/Personal-Portfolio/'
+  },
+  {
+    title: 'Inventory Management System',
+    description: 'A web-based inventory management system for Aristocrat to track stock levels and orders.',
+    tags: ['C#', 'ASP .NET', 'JavaScript', 'Razor', 'HTML', 'PostgreSQL', 'EFCore'],
+    image: 'https://images.unsplash.com/photo-1557821552-17105176677c',
+    link: 'https://thebryand.github.io/Personal-Portfolio/'
+  },
+  {
+    title: 'AJD Laser Cutting Automation',
+    description: 'A custom software solution for a small business, AJD Design, to automate creation of designs and laser cutting sheets.',
+    tags: ['Python', 'Visual Basic', 'Automation', 'Web Scraping', 'JSON', 'REST APIs', 'OAuth2'],
+    image: 'https://images.unsplash.com/photo-1557821552-17105176677c',
+    link: 'https://thebryand.github.io/Personal-Portfolio/'
   },
   // ...more projects
 ];
