@@ -28,12 +28,12 @@ function About() {
               </button>
             </div>
           </div>
-          <div className="relative">
+          <div className="relative aspect-square">
             <div className="aspect-square rounded-lg bg-gradient-to-br from-purple-500 to-pink-500 opacity-20 absolute inset-0"></div>
             <img 
-              src="/path-to-your-image.jpg" 
+              src="./src/assets/test-profile.jpg" 
               alt="Profile" 
-              className="relative rounded-lg"
+              className="relative rounded-lg w-full h-full object-cover"
             />
           </div>
         </div>
