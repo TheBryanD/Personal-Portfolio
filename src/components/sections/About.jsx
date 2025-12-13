@@ -1,5 +1,6 @@
 import React from 'react';
 import { User } from 'lucide-react';
+import ProfileImage from '../../assets/profile.jpg';
 
 function About() {
   return (
@@ -28,13 +29,15 @@ function About() {
               </button>
             </div>
           </div>
-          <div className="relative aspect-square">
-            <div className="aspect-square rounded-lg bg-gradient-to-br from-purple-500 to-pink-500 opacity-20 absolute inset-0"></div>
-            <img 
-              src="./src/assets/test-profile.jpg" 
-              alt="Profile" 
-              className="relative rounded-lg w-full h-full object-cover"
-            />
+          <div className="flex justify-center">
+            <div className="relative w-44 h-44 md:w-56 md:h-56">
+              <div className="rounded-lg bg-gradient-to-br from-purple-500 to-pink-500 opacity-20 absolute inset-0"></div>
+              <img
+                src={ProfileImage}
+                alt="Profile"
+                className="relative rounded-lg w-full h-full object-cover"
+              />
+            </div>
           </div>
         </div>
       </div>
