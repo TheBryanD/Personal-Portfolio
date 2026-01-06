@@ -5,7 +5,7 @@ import { projects } from '../../data/projects';
 
 function Projects() {
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-8">
+    <section id="projects" className="py-20 px-4 sm:px-6 lg:px-8">
       <div className="w-full mx-auto">
         <div className="flex items-center gap-3 mb-12">
           <Briefcase className="text-purple-400" size={32} />

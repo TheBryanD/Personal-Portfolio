@@ -15,15 +15,13 @@ export const projects = [
     title: 'Inventory Management System',
     description: 'A web-based inventory management system for Aristocrat to track stock levels and orders.',
     tags: ['C#', 'ASP .NET', 'JavaScript', 'Razor', 'HTML', 'PostgreSQL', 'EFCore', 'Okta'],
-    image: DatabaseImage,
-    link: 'https://thebryand.github.io/Personal-Portfolio/'
+    image: DatabaseImage
   },
   {
     title: 'Wig Automation Tool',
     description: 'A custom software solution for a small business, Wig Beautiful, to automate updating a datbase with available wigs for the online store, and ordering customers wigs.',
     tags: ['Python', 'Automation', 'Web Scraping', 'JSON', 'REST APIs', 'OAuth2', 'Shopify'],
-    image: WigScreenshot,
-    link: 'https://github.com/TheBryanD/AJDMonogramAutomation'
+    image: WigScreenshot
   },
   {
     title: 'AJD Laser Cutting Automation',

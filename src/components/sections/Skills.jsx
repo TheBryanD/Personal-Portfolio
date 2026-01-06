@@ -5,7 +5,7 @@ import { skills } from '../../data/skills';
 
 function Skills() {
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-900/50">
+    <section id="skills" className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-900/50">
       <div className="w-full mx-auto">
         <div className="flex items-center gap-3 mb-12">
           <Code2 className="text-purple-400" size={32} />

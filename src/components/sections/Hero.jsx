@@ -3,7 +3,7 @@ import { Github, Linkedin, Mail } from 'lucide-react';
 
 function Hero() {
   return (
-    <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
+    <section id="home" className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
       <div className="w-full mx-auto text-center">
         <div className="mb-8 inline-block">
           <div className="w-32 h-32 rounded-full bg-gradient-to-br from-purple-400 to-pink-400 mx-auto flex items-center justify-center text-6xl font-bold">
@@ -21,7 +21,8 @@ function Hero() {
           <SocialLink href="https://www.linkedin.com/in/bryan-davis-bb3b14264/" icon={<Linkedin size={24} />} />
           <SocialLink href="mailto:123bryan1998@gmail.com" icon={<Mail size={24} />} />
         </div>
-        <button className="px-8 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full font-semibold hover:shadow-lg hover:shadow-purple-500/50 transition-all">
+        <button className="px-8 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full font-semibold hover:shadow-lg hover:shadow-purple-500/50 transition-all" 
+        onClick={() => window.open("https://github.com/TheBryanD")}>
           View My Work
         </button>
       </div>

@@ -13,6 +13,10 @@ function App() {
 
   const scrollToSection = (section) => {
     setActiveSection(section);
+    const el = document.getElementById(section);
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
   };
 
   return (

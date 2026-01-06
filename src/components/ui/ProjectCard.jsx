@@ -17,9 +17,11 @@ function ProjectCard({ project }) {
             </span>
           ))}
         </div>
-        <a href={link} className="flex items-center gap-2 text-purple-400 hover:text-purple-300 transition-colors">
-          View Project <ExternalLink size={16} />
-        </a>
+        {link && (
+          <a href={link} className="flex items-center gap-2 text-purple-400 hover:text-purple-300 transition-colors">
+            View Project <ExternalLink size={16} />
+          </a>
+        )}
       </div>
     </div>
   );

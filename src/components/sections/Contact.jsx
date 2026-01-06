@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Mail, Send } from 'lucide-react';
+import { send } from '@emailjs/browser';
 
 function Contact() {
   const [formData, setFormData] = useState({
@@ -8,11 +9,35 @@ function Contact() {
     message: ''
   });
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Add your form submission logic here
-    console.log('Form submitted:', formData);
+  const handleSubmit = async (e) => {
+  e.preventDefault();
+  const templateParams = {
+    from_name: formData.name,
+    from_email: formData.email,
+    message: formData.message,
   };
+
+  try {
+    const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+    const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+    const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+
+    const res = await send(
+      serviceId,
+      templateId,
+      templateParams,
+      publicKey
+    );
+    console.log('Email sent', res);
+    alert('Message sent successfully!');
+    setFormData({ name: '', email: '', message: '' });
+    // show success feedback, clear form, etc.
+  } catch (err) {
+    console.error('Email error', err);
+    alert('Failed to send message. Please try again or manually email me using the provided email.');
+    // show error feedback
+  }
+};
 
   const handleChange = (e) => {
     setFormData({
@@ -22,7 +47,7 @@ function Contact() {
   };
 
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-8">
+    <section id="contact" className="py-20 px-4 sm:px-6 lg:px-8">
       <div className="w-full mx-auto">
         <div className="flex items-center gap-3 mb-12">
           <Mail className="text-purple-400" size={32} />
