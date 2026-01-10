@@ -13,7 +13,7 @@ function About() {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="space-y-6 text-gray-300">
             <p className="text-lg">
-              Hi! I'm a software developer with 5 years of experience building applications. 
+              Hi! I'm a software developer with 3+ years of experience building applications. 
               I went to Tennessee Tech University where I earned my degree in Computer Science.
             </p>
             <p className="text-lg">
