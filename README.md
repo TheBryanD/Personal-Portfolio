@@ -1,3 +1,17 @@
+# [ Custom Portfolio Webpage for me ]
+<!--
+Badges
+-->
+![React](https://img.shields.io/badge/-React-black?style=flat-square&logo=react)
+![GitHub](https://img.shields.io/badge/-GitHub-181717?style=flat-square&logo=github)
+![Nodejs](https://img.shields.io/badge/-Nodejs-black?style=flat-square&logo=Node.js)
+![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=flat-square&logo=tailwind-css&logoColor=white)
+
+This program uses React.js, Node.js, and Tailwindcss to provide a portfolio of my projects on my coding 
+journey.
+
+It is hosted using github pages and github actions.
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
