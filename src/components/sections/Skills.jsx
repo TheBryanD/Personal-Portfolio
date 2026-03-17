@@ -5,13 +5,20 @@ import { skills } from '../../data/skills';
 
 function Skills() {
   return (
-    <section id="skills" className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-900/50">
-      <div className="w-full mx-auto">
-        <div className="flex items-center gap-3 mb-12">
-          <Code2 className="text-purple-400" size={32} />
-          <h2 className="text-4xl font-bold">Skills</h2>
+    <section id="skills" className="px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
+      <div className="section-shell">
+        <div className="mb-12 max-w-3xl">
+          <div className="section-kicker mb-5">
+            <Code2 size={16} />
+            Skills
+          </div>
+          <h2 className="section-title text-slate-50">A toolkit built around shipping useful products.</h2>
+          <p className="section-copy mt-5">
+            I move comfortably between front-end implementation, back-end systems, and the tooling needed to support reliable delivery.
+          </p>
         </div>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+        <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
           {skills.map((skillGroup, idx) => (
             <SkillCard 
               key={idx}

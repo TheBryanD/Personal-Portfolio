@@ -7,21 +7,32 @@ function Navbar({ activeSection, onSectionChange }) {
   const menuItems = ['home', 'about', 'projects', 'skills', 'contact'];
 
   return (
-    <nav className="fixed top-0 w-full bg-slate-900/80 backdrop-blur-md z-50 border-b border-purple-500/20">
-      <div className="mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
-          <div className="text-2xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-            Portfolio
-          </div>
-          
-          {/* Desktop Menu */}
-          <div className="hidden md:flex space-x-8">
+    <nav className="fixed inset-x-0 top-0 z-50 px-4 pt-4 sm:px-6 lg:px-8">
+      <div className="section-shell">
+        <div className="glass-panel flex items-center justify-between rounded-full px-4 py-3 sm:px-5">
+          <button
+            onClick={() => onSectionChange('home')}
+            className="flex items-center gap-3 text-left"
+            aria-label="Go to home section"
+          >
+            <div className="flex h-11 w-11 items-center justify-center rounded-full border border-white/12 bg-white/6 font-['Space_Grotesk'] text-sm font-bold tracking-[0.24em] text-slate-50">
+              BD
+            </div>
+            <div>
+              <div className="font-['Space_Grotesk'] text-sm font-bold uppercase tracking-[0.28em] text-slate-100">Bryan Davis</div>
+              <div className="text-xs text-slate-400">Software developer</div>
+            </div>
+          </button>
+
+          <div className="hidden items-center gap-2 rounded-full border border-white/10 bg-white/5 p-1 md:flex">
             {menuItems.map((item) => (
               <button
                 key={item}
                 onClick={() => onSectionChange(item)}
-                className={`capitalize transition-colors ${
-                  activeSection === item ? 'text-purple-400' : 'text-gray-300 hover:text-white'
+                className={`rounded-full px-4 py-2 text-sm font-semibold capitalize transition-all ${
+                  activeSection === item
+                    ? 'bg-white text-slate-950 shadow-[0_8px_30px_rgba(248,250,252,0.18)]'
+                    : 'text-slate-300 hover:bg-white/6 hover:text-white'
                 }`}
               >
                 {item}
@@ -29,15 +40,26 @@ function Navbar({ activeSection, onSectionChange }) {
             ))}
           </div>
 
-          {/* Mobile Menu Button */}
-          <button className="md:hidden" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+          <div className="hidden md:block">
+            <button
+              onClick={() => onSectionChange('contact')}
+              className="rounded-full bg-amber-300 px-5 py-2.5 text-sm font-semibold text-slate-950 transition-transform hover:-translate-y-0.5"
+            >
+              Let&apos;s talk
+            </button>
+          </div>
+
+          <button
+            className="rounded-full border border-white/10 bg-white/5 p-2.5 text-slate-100 md:hidden"
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            aria-label="Toggle navigation menu"
+          >
             {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
 
-        {/* Mobile Menu */}
         {isMenuOpen && (
-          <div className="md:hidden py-4 space-y-2">
+          <div className="glass-panel mt-3 rounded-3xl p-4 md:hidden">
             {menuItems.map((item) => (
               <button
                 key={item}
@@ -45,11 +67,23 @@ function Navbar({ activeSection, onSectionChange }) {
                   onSectionChange(item);
                   setIsMenuOpen(false);
                 }}
-                className="block w-full text-left px-4 py-2 capitalize hover:bg-purple-500/20 rounded"
+                className={`block w-full rounded-2xl px-4 py-3 text-left text-base font-medium capitalize transition-colors ${
+                  activeSection === item ? 'bg-white text-slate-950' : 'text-slate-200 hover:bg-white/6'
+                }`}
               >
                 {item}
               </button>
             ))}
+
+            <button
+              onClick={() => {
+                onSectionChange('contact');
+                setIsMenuOpen(false);
+              }}
+              className="mt-3 w-full rounded-2xl bg-amber-300 px-4 py-3 text-left font-semibold text-slate-950"
+            >
+              Let&apos;s talk
+            </button>
           </div>
         )}
       </div>
@@ -58,11 +92,3 @@ function Navbar({ activeSection, onSectionChange }) {
 }
 
 export default Navbar;
-
-<section className="py-20">
-  <div className="w-full bg-transparent px-4 sm:px-6 lg:px-8">
-    <div className="max-w-6xl mx-auto">
-      {/* your content that stays centered */}
-    </div>
-  </div>
-</section>
